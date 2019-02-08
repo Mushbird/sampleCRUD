@@ -25,7 +25,9 @@ public class SampleService {
 		return null;
 	}
 	// 3. 입력 액션
-	public int addSample(Sample sample) {
+	public int insertSample(String sampleName) {
+		// mapper를 통한 입력 액션 쿼리 실행
+		 sampleMapper.insertSample(sampleName);
 		return 0;
 	}
 	// 4. 삭제 액션

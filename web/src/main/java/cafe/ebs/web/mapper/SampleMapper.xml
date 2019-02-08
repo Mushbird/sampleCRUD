@@ -8,7 +8,7 @@
 <!-- select(read) : 조회, insert(create) : 생성, delete : 삭제, update : 수정 -->
 <!-- 대부분의 언어는 $(정적)와 #(동적)을 사용한다. -->
 	<!-- 전체 리스트  -->
-	<select id="samleSampleList" 
+	<select id="selectSampleList" 
 			resultType="cafe.ebs.web.vo.Sample">
 			<!-- 쿼리문 작성 : select -->
 			SELECT
