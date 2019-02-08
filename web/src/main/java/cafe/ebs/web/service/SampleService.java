@@ -14,22 +14,27 @@ public class SampleService {
 	@Autowired private SampleMapper sampleMapper;
 	
 	// Dao와 같은 기능을 가진 매서드 선언
+	// 1. 전체 리스트
 	public List<Sample> getSampleList() {
 		
 		return null;
 	}
-	
+	// 2. 검색 리스트
 	public List<Sample> getSampleOne() {
 		
 		return null;
 	}
-	
+	// 3. 입력 액션
 	public int addSample(Sample sample) {
 		return 0;
 	}
-	
+	// 4. 삭제 액션
 	public int removeSample(Sample sample) {
 		
+		return 0;
+	}
+	// 5. 수정 액션
+	public int updateSample(Sample sample) {
 		return 0;
 	}
 }
