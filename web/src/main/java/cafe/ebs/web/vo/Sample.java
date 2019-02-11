@@ -1,5 +1,9 @@
 package cafe.ebs.web.vo;
 
+import org.springframework.stereotype.Component;
+
+// Controller에서 따로 생성자를 이용하여 객체를 일일이 생성하지 않게 하기 위해서 @Component를 사용 
+@Component 
 public class Sample {
 	private int sampleId;	// sample.sample_id
 	private String sampleName;	// sample.sample_name

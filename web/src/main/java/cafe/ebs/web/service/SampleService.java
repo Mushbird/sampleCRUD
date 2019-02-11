@@ -33,12 +33,14 @@ public class SampleService {
 		return result;
 	}
 	// 4. 삭제 액션
-	public int removeSample(Sample sample) {
-		
-		return 0;
+	public int deleteSample(Sample delete) {
+		// mapper를 통한 삭제 액션 쿼리 실행
+		int result = sampleMapper.deleteSample(delete);
+		return result;
 	}
 	// 5. 수정 액션
 	public int updateSample(Sample sample) {
+		// mapper를 통한 수정 액션 쿼리 실행
 		int result = sampleMapper.updateSample(sample);
 		return result;
 	}
