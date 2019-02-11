@@ -6,9 +6,9 @@
 </head>
 <body>
 <form action="/updateSample" method="post">
-<input type="hidden" name="sampleId" th:value="${sample.sampleId}"/>
   <fieldset>
   	이름
+  	<input type="hidden" name="sampleId" th:value="${sample.sampleId}"/>
     <input type="text" name="sampleName" th:value="${sample.sampleName}"/>
     <input type="submit" value="수정" />
   </fieldset>

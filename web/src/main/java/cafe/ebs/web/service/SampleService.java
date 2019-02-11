@@ -39,6 +39,7 @@ public class SampleService {
 	}
 	// 5. 수정 액션
 	public int updateSample(Sample sample) {
-		return 0;
+		int result = sampleMapper.updateSample(sample);
+		return result;
 	}
 }

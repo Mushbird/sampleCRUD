@@ -37,11 +37,20 @@
 			)
 	</insert>
 	<!-- 수정 처리  -->
+	<update id="updateSample"
+			parameterType="cafe.ebs.web.vo.Sample">
+			<!-- 쿼리문 작성 : update -->
+			UPDATE 
+				sample
+			SET sample_name = #{sampleName}
+			WHERE sample_id = #{sampleId}
+	</update>
 	<!-- 삭제 처리  -->
 	<delete id="deleteSample"
 			parameterType="cafe.ebs.web.vo.Sample">
 			<!-- 쿼리문 작성 : delete -->
-			DELETE FROM sample
+			DELETE FROM 
+				sample
 			WHERE sample_id =
 			#{sampleId}
 	</delete>

@@ -72,7 +72,25 @@ public class SampleController {
 	}
 	// 6. 수정 액션
 	@PostMapping("/updateSample")
-	public String updateSample(Model model) {
-		return "sampleList";
+	public String updateSample(@RequestParam(value="sampleId") int sampleId, @RequestParam(value="sampleName") String sampleName) {
+		// 수정 액션 처리에 왔는지 확인한다.
+		System.out.println("Request : /updateSample : 수정 액션");
+		// 잘 받아왔는지 확인
+		System.out.println("sampleId :" + sampleId);
+		System.out.println("sampleName :" +sampleName);
+		// int타입의 sampleId와 String타입의 sampleName을 
+		// vo의 Sample에 있는 sampleId,sampleName에 set,get을 위한 sample참조변수에 setting함
+		// @Autowired에서 써서 sample를 이용하면  NullPointException이 발생되므로 
+		// 따로 생성자를 사용하여 sample2객체를 생성한다.
+		Sample sample2 = new Sample();
+		// sample2객체에 id와 name을 세팅한다.
+		sample2.setSampleId(sampleId);
+		sample2.setSampleName(sampleName);
+		// sample참조변수를 Service의 updateSample매서드를 통해 수정 액션을 처리, 그 결과값을 int타입의 result변수에 담는다.
+		int result = sampleService.updateSample(sample2);
+		// 결과가 성공적이면 1, 그렇지 못하면 0으로 출력된다.
+		System.out.println("updateSample result :"+result);
+		// 수정 처리가 되었다면 전체 리스트로 이동한다.
+		return "redirect:/sampleList";
 	}
 }

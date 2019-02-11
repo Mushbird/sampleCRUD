@@ -14,4 +14,6 @@ public interface SampleMapper {
 	int insertSample(Sample sampleName);
 	// 3. 수정 화면
 	Sample selectSampleOne(int sampleId);
+	// 4. 수정 액션
+	int updateSample(Sample sample);
 }
