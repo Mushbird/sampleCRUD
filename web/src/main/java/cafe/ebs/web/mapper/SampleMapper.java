@@ -12,5 +12,6 @@ public interface SampleMapper {
 	List<Sample> selectSampleList();
 	// 2. 입력 액션
 	int insertSample(Sample sampleName);
-	// 3. 
+	// 3. 수정 화면
+	Sample selectSampleOne(int sampleId);
 }

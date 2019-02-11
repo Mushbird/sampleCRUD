@@ -15,20 +15,22 @@ public class SampleService {
 	
 	// Dao와 같은 기능을 가진 매서드 선언
 	// 1. 전체 리스트
-	public List<Sample> getSampleList() {
+	public List<Sample> selectSampleList() {
 		// mapper를 통한 리스트 쿼리 실행
 		List<Sample> list = sampleMapper.selectSampleList();
 		return list;
 	}
-	// 2. 검색 리스트
-	public List<Sample> getSampleOne() {
-		return null;
+	// 2. 검색 리스트(수정화면)
+	public Sample selectSampleOne(int sampleId) {
+		// mapper를 통한 수정화면 쿼리 실행
+		Sample One = sampleMapper.selectSampleOne(sampleId);
+		return One;
 	}
 	// 3. 입력 액션
 	public int insertSample(Sample sampleName) {
 		// mapper를 통한 입력 액션 쿼리 실행
-		 sampleMapper.insertSample(sampleName);
-		return 0;
+		int result = sampleMapper.insertSample(sampleName);
+		return result;
 	}
 	// 4. 삭제 액션
 	public int removeSample(Sample sample) {

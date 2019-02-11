@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="EUC-KR">
-<title>��ü ����Ʈ</title>
+<meta charset="UTF-8">
+<title>전체 리스트</title>
 </head>
 <body>
 		<table border=1>
 			<tr>
 				<td>sampleId</td>
 				<td>sampleName</td>
+				<td>수정</td>
+				<td>삭제</td>
 			</tr>
 			<tr th:each="s : ${list}">
 				<td th:text="${s.sampleId}"></td>
 				<td th:text="${s.sampleName}"></td>
+				<td><a th:href="@{/updateSample(sampleId=${s.sampleId})}">수정</a></td>
+				<td><a th:href="@{/deleteSample(sampleId=${s.sampleId})}">삭제</a></td>
 			</tr>
 		</table>
 </body>

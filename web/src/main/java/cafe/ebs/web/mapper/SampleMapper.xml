@@ -19,6 +19,12 @@
 	<!-- 수정 화면  -->
 	<select id="selectSampleOne"
 			resultType="cafe.ebs.web.vo.Sample">
+			<!-- 쿼리문 작성 : select -->
+			SELECT
+				sample_id as sampleId,
+				sample_name as sampleName
+			FROM sample
+			WHERE sample_id = #{sampleId}
 	</select>
 	<!-- 등록 처리  -->
 	<insert id="insertSample"
